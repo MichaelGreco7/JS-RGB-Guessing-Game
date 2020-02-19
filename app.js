@@ -13,8 +13,8 @@ var colors = [
 
 // Select each one
 var squares = document.querySelectorAll(".square");
-// Select Scion
-var pickedColor = colors[3];
+// Select Random Color
+var pickedColor = pickColor();
 // Select RGB Span
 var colorDisplay = document.getElementById("colorDisplay");
 // Select message span
@@ -51,4 +51,10 @@ function changeColors(color) {
     // Change each color to match given color
     squares[i].style.backgroundColor = color;
   }
+}
+
+// Create function to pick random color
+function pickColor() {
+  var random = Math.floor(Math.random() * colors.length);
+  return colors[random];
 }
