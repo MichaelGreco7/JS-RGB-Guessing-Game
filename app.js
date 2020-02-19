@@ -34,7 +34,8 @@ for (var i = 0; i < squares.length; i++) {
     if (clickedColor === pickedColor) {
       alert("Correct!");
     } else {
-      alert("Wrong!");
+      // Fade out square if you picked wrong color
+      this.style.backgroundColor = "#232323";
     }
   });
 }
