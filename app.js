@@ -28,6 +28,13 @@ for (var i = 0; i < squares.length; i++) {
 
   // Add click listeners to squres
   squares[i].addEventListener("click", function() {
-    alert("Clicked A Square");
+    // Grab color of clicked square
+    var clickedColor = this.style.backgroundColor;
+    // Compare color to pickedColor
+    if (clickedColor === pickedColor) {
+      alert("Correct!");
+    } else {
+      alert("Wrong!");
+    }
   });
 }
