@@ -13,7 +13,21 @@ var colors = [
 
 // Select each one
 var squares = document.querySelectorAll(".square");
+// Select Scion
+var pickedColor = colors[3];
+// Select Span
+var colorDisplay = document.getElementById("colorDisplay");
+
+// Update color display to show color we picked
+colorDisplay.textContent = pickedColor;
+
 // Loop through each one
 for (var i = 0; i < squares.length; i++) {
+  // Add intital colors to sqaures
   squares[i].style.backgroundColor = colors[i];
+
+  // Add click listeners to squres
+  squares[i].addEventListener("click", function() {
+    alert("Clicked A Square");
+  });
 }
