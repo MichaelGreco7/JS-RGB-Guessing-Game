@@ -15,8 +15,10 @@ var colors = [
 var squares = document.querySelectorAll(".square");
 // Select Scion
 var pickedColor = colors[3];
-// Select Span
+// Select RGB Span
 var colorDisplay = document.getElementById("colorDisplay");
+// Select message span
+var messageDisplay = document.querySelector("#message");
 
 // Update color display to show color we picked
 colorDisplay.textContent = pickedColor;
@@ -36,6 +38,7 @@ for (var i = 0; i < squares.length; i++) {
     } else {
       // Fade out square if you picked wrong color
       this.style.backgroundColor = "#232323";
+      messageDisplay.textContent = "Try Again";
     }
   });
 }
