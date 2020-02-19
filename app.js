@@ -34,11 +34,21 @@ for (var i = 0; i < squares.length; i++) {
     var clickedColor = this.style.backgroundColor;
     // Compare color to pickedColor
     if (clickedColor === pickedColor) {
-      alert("Correct!");
+      messageDisplay.textContent = "Correct!";
+      changeColors(clickedColor);
     } else {
       // Fade out square if you picked wrong color
       this.style.backgroundColor = "#232323";
-      messageDisplay.textContent = "Try Again";
+      messageDisplay.textContent = "Try Again!";
     }
   });
+}
+
+// Change all sqaures to correct color when correct
+function changeColors(color) {
+  // Loop through all squares
+  for (var i = 0; i < color.length; i++) {
+    // Change each color to match given color
+    squares[i].style.backgroundColor = color;
+  }
 }
